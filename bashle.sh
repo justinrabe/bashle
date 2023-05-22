@@ -11,5 +11,7 @@ for i in {5..1}
 do
 	echo "Please enter a 5 letter word. you have $i tries remaining."
 	read guess
-	echo $guess
+	for i in $(seq 1 ${#guess}); do
+		echo "${guess:i-1:1}"
+	done
 done
