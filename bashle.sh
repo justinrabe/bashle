@@ -15,7 +15,10 @@ do
 		for j in $(seq 1 ${#ans}); do
 			if [ ${guess:i-1:1} == ${ans:j-1:1} ]; then
 				echo "green match"
-			fi				
+			else
+				echo "not a match"
+			fi	
+							
 		done
 	done
 done
