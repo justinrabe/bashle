@@ -13,7 +13,7 @@ do
 	read guess
 	for i in $(seq 1 ${#guess}); do
 		for j in $(seq 1 ${#ans}); do
-			if [ ${guess:i-1:1} == ${ans:j-1:1} ]; then
+			if [ ${guess:i-1:1} == ${ans:j-1:1} ] && [ i == j ] ; then
 				echo "green match"
 			else
 				echo "not a match"
